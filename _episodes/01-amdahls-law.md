@@ -1,6 +1,6 @@
 ---
 title: "Using Amdahl's Law"
-slug: dirac-code-scaling-amdahls-law
+slug: dirac-code-scaling-using-amdahls-law
 teaching: 0
 exercises: 0
 questions:
