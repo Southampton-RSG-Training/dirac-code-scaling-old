@@ -1,6 +1,6 @@
 ---
-title: "Introduction"
-slug: "lesson-introduction"
+title: "Understanding Code Scalability"
+slug: dirac-code-scaling-understanding-code-scalability
 teaching: 0
 exercises: 0
 questions:
