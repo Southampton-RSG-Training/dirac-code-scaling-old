@@ -14,10 +14,10 @@ keypoints:
 
 ## Predicting Code Scalability: Amdahl's Law
 
-FIXME: intro to Amdahl's Law, how it can help us understand weak/strong scaling for code.
+FIXME: intro to Amdahl's Law, how it can help us understand weak/strong scaling for code - grab overview from http://www.hpc-carpentry.org/hpc-parallel-novice/02-parallel-estimate/index.html
 
 ## Using Amdahl's Law
 
-FIXME: apply Amdahl's Law 
+FIXME: apply Amdahl's Law to predict code speedup using multiple processors for a given codebase.
 
 {% include links.md %}

@@ -12,6 +12,18 @@ objectives:
 keypoints:
 - "First key point. Brief Answer to questions. (FIXME)"
 ---
-FIXME
+
+## Benchmarking your Code
+
+FIXME: using suitable platform (possibly a DiRAC standardised benchmark machine?) to do it, how to do it, 
+
+## Comparison with Amdahl's Law Predictions
+
+FIXME: illustrate how example code benchmark graph compares against predictions from Amdahl's Law. Show good and bad scalability example graphs
+
+## Next Steps
+
+FIXME: basics of code profiling if needed (key question: where specifically does it perform badly and why?), tools to do this
+
 
 {% include links.md %}
