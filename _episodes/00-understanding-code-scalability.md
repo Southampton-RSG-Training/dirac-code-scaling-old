@@ -21,7 +21,9 @@ keypoints:
 - "Always profile your code to determine bottlenecks before attempting any non-trivial optimisations."
 ---
 
-Parallel HPC resources, such as computing clusters or supercomputers, are incredibly useful in reducing the time-to-results for computationally intensive tasks. However, these computing resources are often in very high demand, and it's important that any code makes *efficient* use of them. When we submit a job to a cluster that runs our code, we have the option of specifying the number of CPUs (and in some cases GPUs) that will be allocated to the job. So we also need to consider to what extent that code is *scalable* with regards to how it uses these resources, to avoid the risk of code consuming more resources than it can effectively use. So as part of the application process for having new code installed on DiRAC, its scalability characteristics need to be measured. This thus helps inform us on how best to assign CPU and other resources when configuring jobs to run with that code.
+When we submit a job to a cluster that runs our code, we have the option of specifying the number of CPUs (and in some cases GPUs) that will be allocated to the job. So we also need to consider to what extent that code is *scalable* with regards to how it uses these resources, to avoid the risk of code consuming more resources than it can effectively use.
+
+As part of the application process for having new code installed on DiRAC, its scalability characteristics need to be measured. This thus helps inform us on how best to assign CPU and other resources when configuring jobs to run with that code.
 
 There are two primary measures of execution time we need to consider for any given code:
 
