@@ -23,7 +23,7 @@ keypoints:
 
 When we submit a job to a cluster that runs our code, we have the option of specifying the number of CPUs (and in some cases GPUs) that will be allocated to the job. So we also need to consider to what extent that code is *scalable* with regards to how it uses these resources, to avoid the risk of code consuming more resources than it can effectively use.
 
-As part of the application process for having new code installed on DiRAC, its scalability characteristics need to be measured. This thus helps inform us on how best to assign CPU and other resources when configuring jobs to run with that code.
+As part of the application process for having new code installed on DiRAC, its scalability characteristics need to be measured. This thus helps inform how best to assign CPU resources when configuring jobs to run with that code.
 
 There are two primary measures of execution time we need to consider for any given code:
 
@@ -39,30 +39,6 @@ So before we consider running and using code on an HPC resource, we need to unde
 
 Once we understand these profiles, we'll have an idea of the **speedup** of the code using multiple cores - the improvement in speed of execution of a task executed on two similar architectures with different resources. These measurements give us good indications for how jobs for this code should be specified, in terms of overall job size and the amount of resources that should be requested.
 
-## Pi as a Code Example
-
-In the following example we have a simple piece of code that calculates pi. When run on our local system using MPI we get the following results:
-
-| Cores (n) | Run Time (s) | Result      | Error         | Speedup |
-|-----------|--------------|-------------|---------------|---------|
-| 1         | 3.99667      | 3.141592655 | 0.00000003182 |         |
-| 2         | 2.064242     | 3.141592655 | 0.00000003182 | 1.94    |
-| 4         | 1.075068     | 3.141592655 | 0.00000003182 | 3.72    |
-| 8         | 0.687097     | 3.141592655 | 0.00000003182 | 5.82    |
-| 16        | 0.349366     | 3.141592655 | 0.00000003182 | 11.44   |
-
-You see that we can reduce the run time of our code by using more cores without affecting the results.
-
-> ## What Type of Scaling?
-> 
-> Looking at the figures above, is this an example of strong or weak scaling?
->
-> > ## Solution
-> > 
-> > This is an example of strong scaling, as we are keeping the data sample the same but increasing the number of cores used.
-> {: .solution}
-{: .challenge}
-
 ## I'm a Developer, Should I Optimise the Code?
 
 As a developer if your code happens to take too long to run or scales badly it's tempting to try to optimise it straight away. But before you do, consider the following [three rules of optimisation](https://wiki.c2.com/?RulesOfOptimization):
@@ -71,9 +47,26 @@ As a developer if your code happens to take too long to run or scales badly it's
 - **2.** Don't *yet*, and
 - **3.** If you must optimise your code, *profile* it before optimising
 
-In non-trivial cases premature optimisation is regarded as bad practice, since optimisation may lead to added code complexity and reduced readability, making the code harder to maintain over time. It is often effort-intensive, and also it's also difficult at a low level, particularly with modern compilers and interpreters, to improve on or anticipate the optimisations they will use. A general maxim is to focus on writing understandable code and getting things working first - the former helps with the latter. Then, once strong and weak scaling profiles have been measured, if optimisation is justifieid you can *profile* your code to work out where and how best to optimise it.
+In non-trivial cases premature optimisation is regarded as bad practice, since optimisation may lead to added code complexity and reduced readability, making the code harder to understand and maintain over time. It is often effort-intensive, and also it's also difficult at a low level, particularly with modern compilers and interpreters, to improve on or anticipate the optimisations they will use. A general maxim is to focus on writing understandable code and getting things working first - the former helps with the latter. Then, once strong and weak scaling profiles have been measured, if optimisation is justifieid you can *profile* your code to work out where and how best to optimise it.
 
 So what is *code profiling*? Profiling your code is about understanding its complexity and performance characteristics, with the usual intent to work out how best to *optimise* the code to improve its performance in some way - typically in terms of speedup, memory, or disk usage. In particular, profiling helps identify *where* bottlenecks exist in the code for these aspects, avoiding summary judgements and guesses which often lead to unnecessary optimisations.
+
+> ## Profilers
+>
+> Each programming language typically offers some open-source and/or free tools
+> on the web, with which you can profile your code. Here are some examples of
+> tools. Note though, depending on the nature of the language of choice, the
+> results can be hard or easy to interpret. In the following we will only list
+> open and free tools:
+>
+> - Python: [line_profiler](https://github.com/pyutils/line_profiler),
+>   [prof](https://docs.python.org/3.9/library/profile.html)
+> - JavaScript: [firebug](https://github.com/firebug/firebug)
+> - Ruby: [ruby-prof](https://github.com/ruby-prof/ruby-prof)
+> - C/C++: [xray](https://llvm.org/docs/XRay.html),
+>   [perf](https://perf.wiki.kernel.org/index.php/Main_Page),
+> - R: [profvis](https://github.com/rstudio/profvis)
+{: .callout }
 
 Donald Knuth said *"We should forget about small efficiencies, say about 97% of the time: premature optimization is the root of all evil. Yet we should not pass up our opportunities in that critical 3%."*. So in short, optimise the obvious trivial, but avoid non-trivial optimisations until you've understood what needs to change - optimisation is often expensive in terms of time!
 
