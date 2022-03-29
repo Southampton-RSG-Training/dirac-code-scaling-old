@@ -56,7 +56,7 @@ By using MPI, we can reduce the run time of our code by using more cores, withou
 
 When we plot the run time against the number of cores, we see the following graph:
 
-<img alt="Time vs Cores for an implementation of Pi" src="../fig/scalability-pi-time-vs-cores.png" width="600" />
+![Time vs Cores for an implementation of Pi]({{ site.url }}{{ site.baseurl }}/fig/scalability-pi-time-vs-cores.png){: width="650px"}
 <!-- TODO: I think the above figure is using different data, the time for 1 core is < 4 secs, not ~4.2 secs as in the figure -->
 
 ## Determining Serial and Parallel Proportions of Code
@@ -183,17 +183,17 @@ The problem with strong scaling is as we increase the number of cores, then the 
 | 8         | 4.356564 | 3.141592654  | 0.00000000397 | 87.52%           |
 | 16        | 4.643724 | 3.141592654  | 0.00000000198 | 93.78%           |
 
-<img alt="%Improved Error vs Cores" src="../fig/scalability-improved-error-vs-cores.png" width="600" />
+![Improved Error vs Cores]({{ site.url }}{{ site.baseurl }}/fig/scalability-improved-error-vs-cores.png){: width="650px"}
 
 As you can see, the run times are similar. Just slightly increasing. However, the accuracy of the calculated value of π has increased. In fact our percentage improvement is nearly in step with the number of cores.
 
 When presenting your weak scaling it is common to show how well it scales, this is shown below:
 
-<img alt="Weak Scaling - Cores vs Time" src="../fig/scalability-weak-scaling-time.png" width="600" />
+![Weak Scaling - Cores vs Time]({{ site.url }}{{ site.baseurl }}/fig/scalability-weak-scaling-time.png){: width="650px"}
 
 We can also plot the scaling factor. This is the percentage increase in run time compared to base run time for a normal run. In this case we are just using *T<sub>1</sub>*:
 
-<img alt="Weak Scaling - Cores vs Scaling Factor" src="../fig/scalability-weak-scaling-factor.png" width="600" />
+![Weak Scaling - Cores vs Scaling Factor]({{ site.url }}{{ site.baseurl }}/fig/scalability-weak-scaling-factor.png){: width="650px"}
 
 The above plot shows that the code is highly scalable. We do have an anomaly with our 4 core run, however. It would be good to rerun this to get a more representative sample, but this result is a common occurrence when using shared systems. In this example we only did a single run for each core count. When compiling your data for presentation or submitting applications, it would be better to do many runs and exclude outlying data samples or provide an uncertainty estimate.
 
