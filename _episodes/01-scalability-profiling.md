@@ -51,7 +51,9 @@ By using MPI, we can reduce the run time of our code by using more cores, withou
 > > ## Solution
 > >
 > > This is an example of strong scaling, as we are keeping the data sample the same but increasing the number of cores used.
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 When we plot the run time against the number of cores, we see the following graph:
@@ -146,7 +148,9 @@ And in our case:
 >
 > > ## Solution
 > > Hopefully from your results you will find that we can get close to the maximum speedup of 25, but it requires ever more resources.
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 > ## Speedup Change?
@@ -155,7 +159,9 @@ And in our case:
 >
 > > ## Solution
 > > From our own trial runs this happens at 4096 core, but it is expected that we would never run this code at these core counts as it would be a waste of resources.
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 > ## How Many Cores Should we Use?
@@ -165,7 +171,9 @@ And in our case:
 > > ## Solution
 > >
 > > Within DiRAC we do not impose such a limit, this would be a decision made by the researchers. Every project has an allocation and it is up to you to decide what is efficient use of your allocation. In this case I personally would not waste my allocation on any runs over 128 cores.
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 
@@ -204,7 +212,9 @@ The above plot shows that the code is highly scalable. We do have an anomaly wit
 > > ## Solution
 > >
 > > The obvious answer is to do more runs with higher core counts, and also try to resolve the *n = 4* sample. This should give you a clearer picture of the weak scaling profile.
-> {: .solution}
+> 
+{: .solution}
+
 {: .challenge}
 
 > ## Obtaining Resources to Profile your Code
