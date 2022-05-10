@@ -57,9 +57,8 @@ which could be as high as 1, but probably will never be in practice.
 > > ## Solution
 > >
 > > This is an example of strong scaling, as we are keeping the data sample the same but increasing the number of cores used.
-> 
-{: .solution}
-
+>{: .solution}
+>
 {: .challenge}
 
 When we plot the run time against the number of cores, we see the following graph:
