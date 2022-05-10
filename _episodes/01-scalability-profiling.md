@@ -162,7 +162,9 @@ Below is a table of the expected maximum speedup for a given F<sub>P</sub>.
 > 
 {: .solution}
 
+> 
 {: .challenge}
+
 
 > ## How Many Cores Should we Use?
 >
@@ -174,6 +176,7 @@ Below is a table of the expected maximum speedup for a given F<sub>P</sub>.
 > 
 {: .solution}
 
+> 
 {: .challenge}
 
 
