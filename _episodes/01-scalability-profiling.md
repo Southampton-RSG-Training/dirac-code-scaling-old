@@ -57,9 +57,8 @@ which could be as high as 1, but probably will never be in practice.
 > > ## Solution
 > >
 > > This is an example of strong scaling, as we are keeping the data sample the same but increasing the number of cores used.
-> 
-{: .solution}
-
+>{: .solution}
+>
 {: .challenge}
 
 When we plot the run time against the number of cores, we see the following graph:
@@ -215,9 +214,8 @@ The above plot shows that the code is highly scalable. We do have an anomaly wit
 > > ## Solution
 > >
 > > The obvious answer is to do more runs with higher core counts, and also try to resolve the *n = 4* sample. This should give you a clearer picture of the weak scaling profile.
+>{: .solution}
 > 
-{: .solution}
-
 {: .challenge}
 
 > ## Obtaining Resources to Profile your Code
