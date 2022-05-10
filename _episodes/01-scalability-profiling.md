@@ -210,9 +210,8 @@ The above plot shows that the code is highly scalable. We do have an anomaly wit
 > > ## Solution
 > >
 > > The obvious answer is to do more runs with higher core counts, and also try to resolve the *n = 4* sample. This should give you a clearer picture of the weak scaling profile.
+>{: .solution}
 > 
-{: .solution}
-
 {: .challenge}
 
 > ## Obtaining Resources to Profile your Code
