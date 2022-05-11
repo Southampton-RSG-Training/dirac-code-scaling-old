@@ -156,11 +156,10 @@ Below is a table of the expected maximum speedup for a given F<sub>P</sub>.
 > | 4096      |               |         |                   |
 >
 > When does the change in speedup drop below 1%?
+>
 > > ## Solution
 > > Hopefully from your results you will find that we can get close to the maximum speedup calculated earlier, but it requires ever more resources. From our own trial runs, we expect the speedup to drop below 1% at 4096 cores, but it is expected that we would never run this code at these core counts as it would be a waste of resources.
-> 
-{: .solution}
-
+>{: .solution}
 > 
 {: .challenge}
 
@@ -172,9 +171,7 @@ Below is a table of the expected maximum speedup for a given F<sub>P</sub>.
 > > ## Solution
 > >
 > > Within DiRAC we do not impose such a limit, this is a decision made by you. Every project has an allocation and it is up to you to decide what is efficient use of your allocation. In this case I personally would not waste my allocation on any runs over 128 cores.
-> 
-{: .solution}
-
+>{: .solution}
 > 
 {: .challenge}
 
